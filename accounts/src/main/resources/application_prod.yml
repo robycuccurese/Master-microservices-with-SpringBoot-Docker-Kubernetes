@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related PROD APIs"
+  contactDetails:
+    name: "Loredana Cuccurese - Product Owner"
+    email: "loredana.cuccurese@eazybank.com"
+  onCallSupport:
+    - (031) 7563421
+    - (+39) 3357623567
