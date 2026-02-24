@@ -10,5 +10,13 @@
 /httpRequests/
 /.idea
 /accounts/target
+/accounts/.mvn
 /cards/target
+/cards/.mvn
 /loans/target
+/loans/.mvn
+/configserver/target
+/configserver/.mvn
+/configserver/mvnw
+/configserver/*.md
+/configserver/*.cmd

@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local APIs"
+  contactDetails:
+    name: "Roberto Cuccurese - Developer"
+    email: "roberto.cuccurese@eazybank.com"
+  onCallSupport:
+    - (081) 4832934
+    - (+39) 3459785234

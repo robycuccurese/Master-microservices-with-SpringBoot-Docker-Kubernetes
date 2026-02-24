@@ -1,13 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "prod"
-
 build:
-  version: "1.0"
+  version: "2.0"
 
-loans:
-  message: "Welcome to EazyBank loans related PROD APIs"
+accounts:
+  message: "Welcome to EazyBank accounts related QA APIs"
   contactDetails:
     name: "Alessandro Cuccurese - QA Lead"
     email: "alessandro.cuccurese@eazybank.com"

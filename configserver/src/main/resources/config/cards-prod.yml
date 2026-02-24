@@ -1,12 +1,7 @@
-spring:
-  config:
-    activate:
-      on-profile: "prod"
-
 build:
   version: "1.0"
 
-accounts:
+cards:
   message: "Welcome to EazyBank accounts related PROD APIs"
   contactDetails:
     name: "Loredana Cuccurese - Product Owner"

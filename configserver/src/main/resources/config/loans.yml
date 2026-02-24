@@ -1,13 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "prod"
-
 build:
-  version: "1.0"
+  version: "3.0"
 
-cards:
-  message: "Welcome to EazyBank cards related PROD APIs"
+loans:
+  message: "Welcome to EazyBank loans related local APIs"
   contactDetails:
     name: "Roberto Cuccurese - Developer"
     email: "roberto.cuccurese@eazybank.com"
