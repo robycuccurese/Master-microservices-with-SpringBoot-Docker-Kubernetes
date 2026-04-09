@@ -20,3 +20,8 @@
 /configserver/mvnw
 /configserver/*.md
 /configserver/*.cmd
+/eurekaserver/target
+/eurekaserver/.mvn
+/eurekaserver/mvnw
+/eurekaserver/*.md
+/eurekaserver/*.cmd
