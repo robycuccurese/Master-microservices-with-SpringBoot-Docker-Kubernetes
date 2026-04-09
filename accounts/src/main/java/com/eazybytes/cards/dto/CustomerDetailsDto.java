@@ -5,11 +5,12 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.Data;
 
 @Data
-@Schema(name = "Customer", description = "Schema to hold Customer and Account information")
-public class CustomerDto {
+@Schema(name = "CustomerDetails", description = "Schema to hold Customer, Account, Card and Loans information")
+
+public class CustomerDetailsDto {
     @Schema(description = "Name of the Customer", example = "Eazy Bytes")
     @NotEmpty(message = "Name can not be null or empty")
     @Size(min = 5, max = 30, message = "The length of the customer name should be between 5 and 30")
@@ -27,4 +28,10 @@ public class CustomerDto {
 
     @Schema(description = "Account details of the Customer")
     private AccountsDto accountsDto;
+
+    @Schema(description = "Loans details of the Customer")
+    private LoansDto loansDto;
+
+    @Schema(description = "Cards details of the Customer")
+    private CardsDto cardsDto;
 }

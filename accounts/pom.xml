@@ -54,9 +54,12 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -136,7 +139,7 @@
 				<version>3.5.1</version>
 				<configuration>
 					<to>
-						<image>rcuccurese/${project.artifactId}:s6</image>
+						<image>rcuccurese/${project.artifactId}:s8</image>
 					</to>
 				</configuration>
 			</plugin>

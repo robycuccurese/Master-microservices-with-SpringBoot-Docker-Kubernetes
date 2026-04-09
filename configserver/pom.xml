@@ -40,16 +40,6 @@
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-monitor</artifactId>
-        </dependency>
-
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator-test</artifactId>
             <scope>test</scope>
@@ -79,11 +69,10 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>rcuccurese/${project.artifactId}:s6</image>
+                        <image>rcuccurese/${project.artifactId}:s8</image>
                     </to>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

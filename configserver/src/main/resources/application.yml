@@ -17,28 +17,20 @@ spring:
           clone-on-start: true  #clone repo into local system during startup
           force-pull: true  #override all local changes
 
-  rabbitmq:
-    host: "localhost"
-    port: 5672
-    stream:
-      username: "guest"
-      password: "guest"
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
   health:
-    readinessstate:
+    readiness-state:
       enabled: true
-    livenessstate:
+    liveness-state:
       enabled: true
   endpoint:
     health:
       probes:
         enabled: true
-
 
 encrypt:
   key: "45D81EC1EF61DF9AD8D3E5BB397F9"
