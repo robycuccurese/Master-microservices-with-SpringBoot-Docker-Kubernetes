@@ -25,3 +25,8 @@
 /eurekaserver/mvnw
 /eurekaserver/*.md
 /eurekaserver/*.cmd
+/gatewayserver/target
+/gatewayserver/.mvn
+/gatewayserver/mvnw
+/gatewayserver/*.md
+/gatewayserver/*.cmd

@@ -15,6 +15,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -33,6 +35,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class LoansController {
+    private static final Logger logger = LoggerFactory.getLogger(LoansController.class);
+    public static final String CORRELATION_ID = "eazybank-correlation-id";
     private final ILoansService iLoansService;
 
     @Value("${build.version}")
@@ -59,7 +63,8 @@ public class LoansController {
     @Operation(summary = "Fetch Loan Details REST API", description = "REST API to fetch loan details based on a mobile number")
     @ApiResponses({@ApiResponse(responseCode = "200", description = "HTTP Status OK"), @ApiResponse(responseCode = "500", description = "HTTP Status Internal Server Error", content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))})
     @GetMapping("/fetch")
-    public ResponseEntity<LoansDto> fetchLoanDetails(@RequestParam @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits") String mobileNumber) {
+    public ResponseEntity<LoansDto> fetchLoanDetails(@RequestHeader(CORRELATION_ID) String correlationId, @RequestParam @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits") String mobileNumber) {
+        logger.debug(CORRELATION_ID + " found: {}", correlationId);
         LoansDto loansDto = iLoansService.fetchLoan(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK).body(loansDto);
     }

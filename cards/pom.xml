@@ -136,7 +136,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>rcuccurese/${project.artifactId}:s8</image>
+                        <image>rcuccurese/${project.artifactId}:s9</image>
                     </to>
                 </configuration>
             </plugin>
